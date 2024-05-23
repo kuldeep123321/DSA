@@ -15,3 +15,11 @@ int main(){
     return fun(55);
 }
 //IT WILL PRINT 1 UNTILL X DID NOT BECOME 100
+
+
+2-->WHEN RECURSION CALL IS DONE IT PUT ALL ITS CALL ON STACK IN SYNCHRONIZE WAY ----> 
+if recursion with no base condition is performed then it will produce the result and at last it will give the segmentation fault
+as the stack as limited storage capacity and it will get fully utilised
+
+
+3-->
