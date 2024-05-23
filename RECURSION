@@ -1,0 +1,17 @@
+//DAY--1-->LEARNING RECURSION
+
+
+1---> BASIC RECURSION FUNCTIONS
+#include<iostream>
+using namespace std;
+void fun(int x){
+    if(x==100){
+        return;
+    }
+    cout<<1<<endl;
+    x++;
+}
+int main(){
+    return fun(55);
+}
+//IT WILL PRINT 1 UNTILL X DID NOT BECOME 100
