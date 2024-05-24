@@ -1,1 +1,8 @@
 
+------>in this video we learn how to use parameterised and functional recursion<-----------
+
+1---<parameteised> basically it print the output as it does not return the answer
+----->as we used void function where additional parameters are used to store the information
+
+2-->function recursion it return the and
+---->int fun()---->it will return ans in int type
