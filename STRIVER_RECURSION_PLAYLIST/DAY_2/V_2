@@ -1,1 +1,106 @@
 
+------>IN THIS VIDEO WE WILL DO SOME BASIC RECURSION QUESTIONS---------->
+
+1--->PRINT YOUR NAME 5 TIMES USING BASIC RECURSION
+#include<iostream>
+using namespace std;
+void funn(int x){
+    if(x==5){
+        return;
+    }
+    cout<<"kuldeep"<<endl;
+    x++;
+    funn(x);
+}
+int main(){
+    funn(0);
+}
+
+
+
+
+2-->Print linearly from 1 to N
+#include<iostream>
+using namespace std;
+void funn(int x,int num){
+    if(x==num+1){
+        return;
+    }
+    cout<<x<<endl;
+    x++;
+    funn(x,num);
+}
+int main(){
+    int n;
+    cin>>n;
+    cout<<endl;
+    funn(1,n);
+}
+
+
+
+
+3--->Print linearly from n to 1
+#include<iostream>
+using namespace std;
+void funn(int num){
+    if(num==0){
+        return;
+    }
+    cout<<num<<endl;
+    num--;
+    funn(num);
+}
+int main(){
+    int n;
+    cin>>n;
+    cout<<endl;
+    funn(n);
+}
+
+
+
+
+4-->PRINT LINEARLY FROM 1 TO N WHILE BACKTRACKIN IT
+#include<iostream>
+using namespace std;
+void funn(int num){
+    if(num==1){
+        return;
+    }
+    
+    num-=1;
+    funn(num);
+    cout<<num<<endl;
+}
+int main(){
+    int n;
+    cin>>n;
+    cout<<endl;
+    funn(n+1);
+}
+
+
+
+
+
+5--->print from n to 1 while backtrack
+#include<iostream>
+using namespace std;
+void funn(int x,int num){
+    if(x==num){
+        return;
+    }
+    x++;
+    funn(x,num);
+   
+    cout<<x<<endl;
+    
+   
+}
+int main(){
+    int n;
+    cin>>n;
+    cout<<endl;
+    funn(0,n);
+}
