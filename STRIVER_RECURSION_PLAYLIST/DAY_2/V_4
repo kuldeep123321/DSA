@@ -31,3 +31,35 @@ Therefore, the total time complexity is:
  =O(n)
 Conclusion
 The time complexity of the funn function is O(n), where n is the size of the vector. This linear time complexity indicates that the function efficiently reverses the vector by processing each element exactly once.
+
+
+
+
+
+
+
+
+2--->CHECK IF STRING IS PALINDROMIC OR NOT
+#include<iostream>
+#include<vector>
+using namespace std;
+bool funn(string ss,int s,int e){
+    if(s>=e){
+        return true;
+    }
+    if(ss[s]!=ss[e]){
+        return false;
+    }
+    return funn(ss,s+1,e-1);
+    
+}
+int main(){
+    string p="kuldeep";
+    if(funn(p,0,p.length()-1)){
+        cout<<"aachhcknakj"<<endl;
+    }
+    else{
+        cout<<"hi"<<endl;
+    }
+   
+}
