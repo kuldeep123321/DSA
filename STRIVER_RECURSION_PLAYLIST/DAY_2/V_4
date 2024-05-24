@@ -1,1 +1,33 @@
+-------->in this we are using recursin------> 
 
+1---->reverse an array using recursion
+
+
+code:
+ #include<iostream>
+#include<vector>
+using namespace std;
+void funn(vector<int> &v,int s,int e){
+    if(s>=e){
+        return;
+    }
+    swap(v[s],v[e]);
+    funn(v,s+1,e-1);
+}
+int main(){
+    vector<int> v={1,2,3,4,5,6,7};
+    cout<<endl;
+    funn(v,0,v.size()-1);
+    for(int i=0;i<v.size();i++){
+        cout<<v[i]<<endl;
+    }
+}
+
+Time Complexity:
+Each recursive call takes O(1) time for the swap operation and the constant-time base case check.
+There are approximately n/2 recursive calls.
+Therefore, the total time complexity is:
+𝑂(1)×𝑛/2=𝑂(𝑛)
+ =O(n)
+Conclusion
+The time complexity of the funn function is O(n), where n is the size of the vector. This linear time complexity indicates that the function efficiently reverses the vector by processing each element exactly once.
