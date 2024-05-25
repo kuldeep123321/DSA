@@ -1,1 +1,18 @@
 
+//Multiple recursion calls
+--->we can call recursion any number of times under function for different approaches
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int fun(int x){
+    if(x<=1){
+        return x;
+    }
+    int last=fun(x-1);//firdt call
+    int slast=fun(x-2);//first call
+    return last+slast;
+}
+int main() {
+    cout<<fun(7);
+    return 0;
+}
