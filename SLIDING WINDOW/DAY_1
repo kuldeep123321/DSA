@@ -1,1 +1,44 @@
 
+ON DAY_1 I LEARN ABOUT SLIDING WINDOW
+
+
+1----->LONGEST SUBSTRING WITHOUT REPEATING CHARACTER
+<--------BRUTE FORCE------>
+
+for(int i=0;I<n;i++){
+hash[255]={0};
+for(j=i;j<n;j++){
+if(hash[j]==1) break;
+}
+else{
+len=j-i+1;
+maxlen=max(maxlen,len);
+hash[s[j]]=i;
+}
+
+
+time complexity===o(n^2)
+space complexity===0(255);
+
+optimes approach --1
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        vector<int> hash(255,-1);
+        int left=0,right=0;
+        int n=s.length();
+        int len=0;
+        while(right<n){
+            if(hash[s[right]]!=-1){
+                left=max(hash[s[right]]+1,left);
+            }
+            hash[s[right]]=right;
+            len=max(len,right-left+1);
+            right++;
+        }
+        return len;
+    }
+};
+
+time complexity-==o(n);
+space complexity===0(255);
